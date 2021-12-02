@@ -9,8 +9,6 @@ total_increases = data.rolling(3).sum()
 df = pd.DataFrame(total_increases)
 
 for index, row in df.iterrows():
-
-    # do this if not NaN
     line = row[0].astype(int)
     if int(line) > int(old_line):
         increase = increase + 1
